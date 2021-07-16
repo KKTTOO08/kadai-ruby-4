@@ -43,7 +43,7 @@
         <% name = params['name'] %>
         <% mail = params['mail'] %>
         <% tel = params['tel'] %>
-        <% content = params['content'] %>
+        <% content = params['content'].gsub(/\r\n|\r|\n/, "<br>") %>
         
         <P>会社名：<%= company %></P>
         <P>氏名：<%= name %></P>
